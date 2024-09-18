@@ -1,0 +1,30 @@
+pipeline:
+  name: Pipeline as Code Test
+  identifier: Pipeline_as_Code_Test
+  projectIdentifier: DavidStewart_Sandbox
+  orgIdentifier: Sandbox
+  tags: {}
+  stages:
+    - stage:
+        name: Custom stage
+        identifier: Custom_stage
+        description: ""
+        type: Custom
+        spec:
+          execution:
+            steps:
+              - step:
+                  type: ShellScript
+                  name: ShellScript_1
+                  identifier: ShellScript_1
+                  spec:
+                    shell: Bash
+                    executionTarget: {}
+                    source:
+                      type: Inline
+                      spec:
+                        script: echo "Hello"
+                    environmentVariables: []
+                    outputVariables: []
+                  timeout: 10m
+        tags: {}
